@@ -3,6 +3,7 @@ import "./App.css";
 
 import Component from "@reach/component-component";
 import { Dialog } from "@reach/dialog";
+import "@reach/dialog/styles.css";
 import { ScrollLocky } from "react-scroll-locky";
 import FullScreen from "mobile-safari-fullscreen";
 
