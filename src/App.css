@@ -1,0 +1,74 @@
+:focus {
+  outline-style: solid;
+}
+
+a {
+  text-decoration-skip: ink;
+}
+
+body {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.content {
+  padding: 1rem;
+}
+
+.iosFix {
+  /* Allows content to fill the viewport and go beyond the bottom */
+  height: 100%;
+  /* Allows you to scroll below the viewport; default value is visible */
+  overflow-y: scroll;
+  /* To smooth any scrolling behavior */
+  -webkit-overflow-scrolling: touch;
+}
+
+[data-reach-dialog-content].fullscreen, .fullscreen {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+[data-reach-dialog-overlay] {
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.33);
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+[data-reach-dialog-content] {
+  position: relative;
+  background: #fff;
+  margin: 10vh auto;
+  outline: none;
+  padding: 2rem;
+  width: 50vw;
+}
+
+[data-reach-dialog-content] > button.close-button {
+  border: none;
+  font-size: 150%;
+  padding: 5px;
+  position: absolute;
+  right: 10px;
+  top: 0;
+}
+[data-reach-dialog-content] > button.close-button:active {
+  left: auto;
+  position: absolute;
+  right: 9px;
+  top: 1px;
+}
+[data-reach-dialog-content] > button.close-button:focus {
+  color: #007bff;
+}
