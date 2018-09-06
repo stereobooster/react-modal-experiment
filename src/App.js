@@ -1,123 +1,23 @@
 import React from "react";
 import "./App.css";
-
-import Component from "@reach/component-component";
-import { Dialog } from "@reach/dialog";
-import "@reach/dialog/styles.css";
-import { ScrollLocky } from "react-scroll-locky";
-import FullScreen from "mobile-safari-fullscreen";
+import { Router, Link } from "@reach/router";
+import VersionOne from "./components/VersionOne";
 
 class App extends React.Component {
   render() {
     return (
-      <Component initialState={{ showDialog: false }}>
-        {({ state, setState }) => (
-          <div className="content">
-            <form>
-              <input />
-            </form>
-
-            <p>Scroll down</p>
-
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-
-            <button onClick={() => setState({ showDialog: true })}>
-              Show Dialog
-            </button>
-
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-
-            {state.showDialog && (
-              <FullScreen
-                classNames={{ iosFix: "iosFix" }}
-                isOpen={state.showDialog}
-              >
-                <Dialog className="fullscreen">
-                  <ScrollLocky>
-                    <form>
-                      <input />
-                    </form>
-                    <button onClick={() => setState({ showDialog: false })}>
-                      Close
-                    </button>
-                    <p>
-                      imagine long list from combox, like downshift
-                      <br />
-                      <br />
-                      <br />
-                      <br />
-                      <br />
-                      <br />
-                      <br />
-                      <br />
-                      <br />
-                      <br />
-                      <br />
-                      <br />
-                      <br />
-                      <br />
-                      <br />
-                      <br />
-                      <br />
-                      <br />
-                      <br />
-                      <br />
-                      <br />
-                      <br />
-                      <br />
-                      <br />
-                      <br />
-                      <br />
-                      <br />
-                      <br />
-                      <br />
-                      ...more
-                    </p>
-                  </ScrollLocky>
-                </Dialog>
-              </FullScreen>
-            )}
-          </div>
-        )}
-      </Component>
+      <div className="content">
+        <nav>
+          <Link to="/">v1</Link> | <Link to="v2">v2</Link>|{" "}
+          <Link to="v3">v3</Link> | <Link to="v4">v4</Link>
+        </nav>
+        <Router>
+          <VersionOne path="/" />
+          <VersionOne path="v2" />
+          <VersionOne path="v3" />
+          <VersionOne path="v4" />
+        </Router>
+      </div>
     );
   }
 }

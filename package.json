@@ -4,8 +4,13 @@
   "private": true,
   "homepage": "https://stereobooster.github.io/react-modal-experiment/",
   "dependencies": {
+    "@blacklane/react-infinite-calendar": "^2.3.17",
     "@reach/component-component": "^0.1.1",
     "@reach/dialog": "^0.1.1",
+    "@reach/rect": "^0.1.1",
+    "@reach/router": "^1.1.1",
+    "@reach/window-size": "^0.1.1",
+    "downshift": "^2.2.1",
     "mobile-safari-fullscreen": "^0.0.1",
     "normalize.css": "^8.0.0",
     "react": "^16.4.2",
