@@ -1,7 +1,11 @@
 import React from "react";
 import "./App.css";
 import { Router, Link } from "@reach/router";
-import VersionOne from "./components/VersionOne";
+import Form from "./components/Form";
+import FullScreenOne from "./components/FullScreenOne";
+import FullScreenTwo from "./components/FullScreenTwo";
+import FullScreenThree from "./components/FullScreenThree";
+import FullScreenFour from "./components/FullScreenFour";
 
 class App extends React.Component {
   render() {
@@ -12,10 +16,10 @@ class App extends React.Component {
           <Link to="v3">v3</Link> | <Link to="v4">v4</Link>
         </nav>
         <Router>
-          <VersionOne path="/" />
-          <VersionOne path="v2" />
-          <VersionOne path="v3" />
-          <VersionOne path="v4" />
+          <Form path="/" FullScreenModal={FullScreenOne} version="v1" />
+          <Form path="v2" FullScreenModal={FullScreenTwo} version="v2" />
+          <Form path="v3" FullScreenModal={FullScreenThree} version="v3" />
+          <Form path="v4" FullScreenModal={FullScreenFour} version="v4" />
         </Router>
       </div>
     );
