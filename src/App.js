@@ -14,25 +14,25 @@ class App extends React.Component {
     return (
       <div className="content">
         <nav>
-          <Link to={path}>v1</Link> | <Link to={`${path}/v2`}>v2</Link>|{" "}
-          <Link to={`${path}/v3`}>v3</Link> | <Link to={`${path}/v4`}>v4</Link>
+          <Link to={path}>v1</Link> | <Link to={`${path}/v2/`}>v2</Link>|{" "}
+          <Link to={`${path}/v3/`}>v3</Link> | <Link to={`${path}/v4/`}>v4</Link>
         </nav>
         <Router>
           <Redirect from="/" to={path} />
-          <Redirect from={`${path}/v1`} to={path} />
+          <Redirect from={`${path}/v1/`} to={path} />
           <Form path={path} FullScreenModal={FullScreenOne} version="v1" />
           <Form
-            path={`${path}/v2`}
+            path={`${path}/v2/`}
             FullScreenModal={FullScreenTwo}
             version="v2"
           />
           <Form
-            path={`${path}/v3`}
+            path={`${path}/v3/`}
             FullScreenModal={FullScreenThree}
             version="v3"
           />
           <Form
-            path={`${path}/v4`}
+            path={`${path}/v4/`}
             FullScreenModal={FullScreenFour}
             version="v4"
           />
