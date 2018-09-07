@@ -24,7 +24,23 @@ Reach `Dialog` and some CSS and `ScrollLocky`.
 
 Issue: even so scroll is locked when user scrolls down and bottom chrome of the Mobile Safari get's hidden, but later it is possible to trigger appearance of bottom chrome and part of the modal will be hidden.
 
-Solution: use [mobile-safari-fullscreen](https://github.com/stereobooster/mobile-safari-fullscreen) to always show bottom browser chrome.
+Solution: use [`mobile-safari-fullscreen`](https://github.com/stereobooster/mobile-safari-fullscreen) to always show bottom browser chrome.
+
+## `FullScreenFour`
+
+Reach `Dialog` and some CSS and `ScrollLocky` and `mobile-safari-fullscreen`.
+
+Side note: `WindowSize` can be used instead `mobile-safari-fullscreen`. I would this is preferd option, this demo is more to show how much edgecase is possible.
+
+```js
+<WindowSize>
+  {({ height }) => (
+    <ul style={{ height }}>
+      <li />
+    </ul>
+  )}
+</WindowSize>
+```
 
 ## About focus
 
