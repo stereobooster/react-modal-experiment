@@ -28,11 +28,11 @@ It works, except user can use <kbd>Tab</kbd> (or <kbd>⌃</kbd> and <kbd>⌄</kb
 
 ## Attempt number 2
 
-[Online example](https://stereobooster.github.io/react-modal-experiment/v2)
+[Online example](https://stereobooster.github.io/react-modal-experiment/v2/)
 
 Use [Reach `Dialog`](https://ui.reach.tech/dialog) (in addition to previous solution). `Dialog` will set `aria-hidden` on all nodes at the `document.body` root except for the currently active dialog. This traps the virtual cursor inside the dialog.
 
-Side note: I tried [react-focus-lock](https://github.com/theKashey/react-focus-lock), but it doesn't work in iOS (I mean for <kbd>⌃</kbd> and <kbd>⌄</kbd>).
+~~Side note: I tried [react-focus-lock](https://github.com/theKashey/react-focus-lock), but it doesn't work in iOS (I mean for <kbd>⌃</kbd> and <kbd>⌄</kbd>).~~
 
 It works, except when the user wants to scroll the content of the modal, but instead, they will scroll content behind the modal.
 
@@ -40,7 +40,7 @@ It works, except when the user wants to scroll the content of the modal, but ins
 
 ## Attempt number 3
 
-[Online example](https://stereobooster.github.io/react-modal-experiment/v3)
+[Online example](https://stereobooster.github.io/react-modal-experiment/v3/)
 
 Use [`ScrollLocky`](https://github.com/theKashey/react-scroll-locky) (in addition to previous solution). `ScrollLocky` blocks any interactions with the rest of a page with the help of `react-locky` and `position: relative` on the body.
 
@@ -50,7 +50,7 @@ It works, except when the user scrolls down and bottom chrome of the Mobile Safa
 
 ## Attempt number 4
 
-[Online example](https://stereobooster.github.io/react-modal-experiment/v4)
+[Online example](https://stereobooster.github.io/react-modal-experiment/v4/)
 
 Use [`mobile-safari-fullscreen`](https://github.com/stereobooster/mobile-safari-fullscreen) (in addition to previous solution). It will always force to show the bottom of browser chrome when modal is opened.
 
@@ -75,3 +75,5 @@ This kind of small details is what makes frontend development hard and interesti
 **PS** [Different browser have the different behavior of focus](https://gist.github.com/cvrebert/68659d0333a578d75372). The most noticeable is Mobile Safari which doesn't allow to focus on links and buttons `¯\_(ツ)_/¯`.
 
 Check out [this GitHub repo](https://github.com/stereobooster/react-modal-experiment) for the full code for this post.
+
+Follow me on [twitter](https://twitter.com/stereobooster) and [github](https://github.com/stereobooster).
