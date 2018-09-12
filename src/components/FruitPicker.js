@@ -16,8 +16,8 @@ const stateReducer = (state, changes) => {
   }
 };
 
-const FruitPicker = ({ FullScreenModal }) => (
-  <Component initialState={{ showDialog: false, value: undefined }}>
+export default ({ FullScreenModal }) => (
+  <Component initialState={{ showDialog: false, value: "" }}>
     {({ state, setState }) => (
       <div>
         <div className="field">
@@ -45,7 +45,6 @@ const FruitPicker = ({ FullScreenModal }) => (
                 getInputProps,
                 getItemProps,
                 getMenuProps,
-                isOpen,
                 inputValue,
                 highlightedIndex,
                 selectedItem
@@ -94,5 +93,3 @@ const FruitPicker = ({ FullScreenModal }) => (
     )}
   </Component>
 );
-
-export default FruitPicker;

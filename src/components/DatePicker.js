@@ -4,7 +4,7 @@ import InfiniteCalendar from "@blacklane/react-infinite-calendar";
 import "@blacklane/react-infinite-calendar/styles.css";
 import WindowSize from "@reach/window-size";
 
-const DatePicker = ({ FullScreenModal }) => (
+export default ({ FullScreenModal }) => (
   <Component initialState={{ showDialog: false, value: new Date() }}>
     {({ state, setState }) => (
       <div>
@@ -50,5 +50,3 @@ const DatePicker = ({ FullScreenModal }) => (
     )}
   </Component>
 );
-
-export default DatePicker;

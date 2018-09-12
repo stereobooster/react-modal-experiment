@@ -6,6 +6,7 @@ import FullScreenOne from "./components/FullScreenOne";
 import FullScreenTwo from "./components/FullScreenTwo";
 import FullScreenThree from "./components/FullScreenThree";
 import FullScreenFour from "./components/FullScreenFour";
+import FullScreenFive from "./components/FullScreenFive";
 
 const path = "react-modal-experiment";
 
@@ -14,8 +15,10 @@ class App extends React.Component {
     return (
       <div className="content">
         <nav>
-          <Link to={path}>v1</Link> | <Link to={`${path}/v2/`}>v2</Link>|{" "}
-          <Link to={`${path}/v3/`}>v3</Link> | <Link to={`${path}/v4/`}>v4</Link>
+          <Link to={path}>v1</Link> | <Link to={`${path}/v2/`}>v2</Link> |{" "}
+          <Link to={`${path}/v3/`}>v3</Link> |{" "}
+          <Link to={`${path}/v4/`}>v4</Link> |{" "}
+          <Link to={`${path}/v5/`}>v5</Link>
         </nav>
         <Router>
           <Redirect from="/" to={path} />
@@ -35,6 +38,11 @@ class App extends React.Component {
             path={`${path}/v4/`}
             FullScreenModal={FullScreenFour}
             version="v4"
+          />
+          <Form
+            path={`${path}/v5/`}
+            FullScreenModal={FullScreenFive}
+            version="v5"
           />
         </Router>
       </div>
